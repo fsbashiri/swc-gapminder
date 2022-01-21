@@ -21,4 +21,10 @@ ax.set_xticks(range(len(data.index)))
 ax.set_xticklabels(data.index, rotation = 45)
 
 # display the plot
-plt.show()
+# plt.show()
+
+# save the plot with a unique file name
+split_name1 = filename.split('.')[0] #data/gapminder_gdp_XXX
+split_name2 = split_name1.split('/')[1]
+save_name = 'figs/' + split_name2 + '.png'
+plt.savefig(save_name)
